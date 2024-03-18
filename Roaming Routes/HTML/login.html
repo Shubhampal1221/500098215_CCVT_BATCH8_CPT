@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/nav1.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <title>login | RoamingRoutes</title>
+</head>
+
+<body>
+    <div id="navigation"></div>
+    <script>
+        $(document).ready(function() {
+
+            $('#navigation').load("nav0.html");
+
+        });
+    </script>
+    <div class="container">
+        <div class="row display-flex">
+            <div class="col-sm-6 col-xs-12 col-md-4 col-md-offset-2" id="login-intro-form">
+                <h1 class="text-center login-login-title">Hello Globetrotter</h1>
+                <div class="login-account-wall">
+                    <img class="login-profile-img" src="../Images/login/avatar.png" alt="">
+                    <form class="login-form-signin" action="../HTML/home.html">
+                        <input type="text" class="form-control" placeholder="Email" required autofocus>
+                        <input type="password" class="form-control" placeholder="Password" required>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                            Sign in</button>
+                        <label class="checkbox pull-left">
+                        <input type="checkbox" value="remember-me">
+                        Remember me
+                    </label>
+                        <a href="contact.html" class="pull-right login-need-help">Need help? </a><span class="clearfix"></span>
+                    </form>
+                    or <br>
+                    <a href="signup.html" class="text-center login-new-account">Create an account </a>
+                </div>
+
+            </div>
+            <div class="col-sm-6 col-xs-12 col-md-4" id="login-intro">
+                <h2 class="login-login-title text-center">Welcome toRoamingRoutes</h2>
+
+                <img class="img-responsive img-rounded" src="../Images/login/side.jpg" alt="signup image">
+                <p style="text-align: center;margin-top: 2rem; color: rgb(235, 247, 185);">We Are Happy to see you here. We are working to provide the best services to you.</p>
+            </div>
+        </div>
+    </div>
+    <div id="foot"></div>
+    <script>
+        $(document).ready(function() {
+
+            $('#foot').load("footer.html");
+
+        });
+    </script>
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+   
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBvcEIpx9yWQYuoksraOQuUofSsHgiFsDo",
+      authDomain: "cpt-p-f72ad.firebaseapp.com",
+      databaseURL: "https://cpt-p-f72ad-default-rtdb.firebaseio.com",
+      projectId: "cpt-p-f72ad",
+      storageBucket: "cpt-p-f72ad.appspot.com",
+      messagingSenderId: "64652529633",
+      appId: "1:64652529633:web:12615ac280cc7ecd108ca0"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+    sighUp.addEventListener('click',(e) => {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        
+        // Signed up 
+    const user = userCredential.user;
+    alert('user created!')
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+     alert(errorMessage);
+    // ..
+  });
+  </script>
+
+
+
+</html>
